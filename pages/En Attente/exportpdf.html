@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catalogue du Marché de Noël</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <h1>Marché de Noël</h1>
+  <button id="exportPdf">Exporter le catalogue (PDF)</button>
+
+  <script>
+    // Les données du catalogue
+    const data = [
+      { name: "Objet 1", price: "15€", description: "Description de l'objet 1" },
+      { name: "Objet 2", price: "20€", description: "Description de l'objet 2" },
+      { name: "Objet 3", price: "25€", description: "Description de l'objet 3" },
+    ];
+
+    document.getElementById("exportPdf").addEventListener("click", () => {
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF();
+
+      // Titre du document
+      doc.setFontSize(18);
+      doc.text("Catalogue du Marché de Noël", 14, 20);
+
+      // Ajout du tableau
+      const tableColumn = ["Nom", "Prix", "Description"];
+      const tableRows = data.map(item => [item.name, item.price, item.description]);
+
+      // Configuration du tableau
+      doc.autoTable({
+        head: [tableColumn],
+        body: tableRows,
+        startY: 30,
+      });
+
+      // Sauvegarder le fichier PDF
+      doc.save("catalogue_marche_de_noel.pdf");
+    });
+  </script>
+</body>
+</html>

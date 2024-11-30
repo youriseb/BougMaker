@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Blanche neige",
+    "image": "images/creations/blanche-neige.jpg",
+    "description": "Une description détaillée de l'objet toot.",
+    "price": 20,
+    "cost": 12,
+    "time": 3
+},
+{
+    "name": "Peter Pan 1",
+    "image": "images/creations/peter-pan-1.jpg",
+    "description": "Une description détaillée de l'objet 2.",
+    "price": 30,
+    "cost": 12,
+    "time": 3
+},
+{
+    "name": "Pirate",
+    "image": "images/creations/pirate.jpg",
+    "description": "Une description détaillée de l'objet 2.",
+    "price": 30,
+    "cost": 12,
+    "time": 3
+},
+{
+    "name": "Peter Pan 2",
+    "image": "images/creations/peter-pan-2.jpg",
+    "description": "Une description détaillée de l'objet 2.",
+    "price": 30,
+    "cost": 12,
+    "time": 3
+},
+{
+    "name": "Puma Lion Tigre",
+    "image": "images/creations/puma-lion-tigre.jpg",
+    "description": "Une description détaillée de l'objet 2.",
+    "price": 30,
+    "cost": 12,
+    "time": 3
+},
+{
+    "name": "Puma Lion Tigre",
+    "image": "images/creations/puma-lion-tigre.jpg",
+    "description": "Une description détaillée de l'objet 2.",
+    "price": 30,
+    "cost": 12,
+    "time": 3
+},
+{
+    "name": "Puma Lion Tigre",
+    "image": "images/creations/puma-lion-tigre.jpg",
+    "description": "Une description détaillée de l'objet 2.",
+    "price": 30,
+    "cost": 12,
+    "time": 3
+}
+]
