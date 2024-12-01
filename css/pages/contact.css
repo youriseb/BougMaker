@@ -1,0 +1,23 @@
+.contact-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Crée trois colonnes de même largeur */
+    gap: 20px; /* Espace entre les colonnes */
+    margin: 0 auto; /* Centre le conteneur */
+}
+
+.contact-column {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-column h2 {
+    margin-top: 0;
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr; /* Affiche les colonnes en une seule colonne sur les petits écrans */
+    }
+}

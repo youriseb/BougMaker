@@ -1,87 +1,127 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Marché de Noël</title>
-        <link id="theme-style" rel="stylesheet" href="styles/styles.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <script src="scripts/script.js" defer></script>
-    </head>
-    <body>
-        <div class="wrapper">
 
-            <!-- HEADER -->
-            <header>
-                <div class="container">
-                    <h1>Boug' Maker</h1>
-                    <div class="burger" onclick="toggleMenu()">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                    <nav>
-                        <a href="#" onclick="loadPage('accueil.html')">
-                            Accueil
-                            <span class="fas fa-home"></span>
-                        </a>
-                        <a href="#" onclick="loadPage('creations.html');">
-                            Créations
-                            <span class="fas fa-paint-brush"></span>
-                        </a>
-                        <a href="#" onclick="loadPage('catalogue.html')">
-                            Catalogue
-                            <span class="fas fa-book"></span>
-                        </a>
-                        <a href="#" onclick="loadPage('fabrication.html')">
-                            Fabrication
-                            <span class="fas fa-tools"></span>
-                        </a>
-                        <a href="#" onclick="loadPage('contact.html')">
-                            Contact
-                            <span class="fas fa-envelope"></span>
-                        </a>
-                    </nav>
-                </div>
-                <div class="mobile-menu">
-                    <a href="index.html">Accueil</a>
-                    <a href="#" onclick="loadPage('fabrication.html')">Fabrication</a>
-                    <a href="#" onclick="loadPage('cards.html')">Catalogue</a>
-                    <a href="#" onclick="loadPage('contact.html')">Contact</a>
-                </div>
-            </header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boug'Maker - Misons sur la créativité</title>
+    <link rel="stylesheet" href="css/base/general.css">
+    <link rel="stylesheet" href="css/components/cards.css">
+    <link rel="stylesheet" href="css/components/list.css">
+    <link rel="stylesheet" href="css/pages/fabrication.css">
+    <link rel="stylesheet" href="css/pages/home.css">
+    <link rel="stylesheet" href="css/pages/contact.css">
+    <link rel="stylesheet" href="css/utilities.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
 
-            <main>
-                <div class="container">
-                    <div id="content">
-                        <!-- Contenu chargé dynamiquement -->
-                    </div>
-                    <div id="content-catalog-cards">
-                        <div id="card-container" class="card-container"></div>
-                        <div id="details" class="details hidden">
-                            <button id="back-button" class="back-button">Retour</button>
-                            <h2 id="details-title"></h2>
-                            <div class="content">
-                                <img id="details-image" alt="Objet">
-                                <div class="info">
-                                    <p id="details-description"></p>
-                                    <p id="details-price"></p>
-                                    <p id="details-cost"></p>
-                                    <p id="details-time"></p>
-                                </div>
+    <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+     <script src="scripts/script.js" defer></script>
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <!-- HEADER -->
+        <header>
+            <div class="container">
+                <img src="images/bougmaker-logo.png" alt="Logo Bougmaker" class="logo" onclick="loadPage('accueil.html')" >
+                <div class="burger" onclick="toggleMenu()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="header-text">
+                    Misons sur notre créativité !
+                </div>
+                <nav>
+                    <a href="#" onclick="loadPage('accueil.html')">
+                        Accueil
+                        <span class="fas fa-home"></span>
+                    </a>
+                    <a href="#" onclick="loadPage('creations.html');">
+                        Créations
+                        <span class="fas fa-paint-brush"></span>
+                    </a>
+                    <!--
+                    <a href="#" onclick="loadPage('catalogue.html')">
+                        Catalogue
+                        <span class="fas fa-book"></span>
+                    </a>
+                    -->
+                    <a href="#" onclick="loadPage('fabrication.html')">
+                        Fabrication
+                        <span class="fas fa-tools"></span>
+                    </a>
+                    <a href="#" onclick="loadPage('contact.html')">
+                        Contact
+                        <span class="fas fa-envelope"></span>
+                    </a>
+                </nav>
+            </div>
+            <div class="mobile-menu">
+                <a href="#" onclick="loadPage('accueil.html')">
+                    <span class="fas fa-home"></span>
+                    Accueil
+                </a>
+                <a href="#" onclick="loadPage('creations.html');">
+                    <span class="fas fa-paint-brush"></span>
+                    Créations
+                </a>
+                <!--
+                <a href="#" onclick="loadPage('catalogue.html')">
+                    <span class="fas fa-book"></span>
+                    Catalogue
+                </a>
+                -->
+                <a href="#" onclick="loadPage('fabrication.html')">
+                    <span class="fas fa-tools"></span>
+                    Fabrication
+                </a>
+                <a href="#" onclick="loadPage('contact.html')">
+                    <span class="fas fa-envelope"></span>
+                    Contact
+                </a>
+            </div>
+        </header>
+
+        <main>
+            <div class="container">
+                <div id="content">
+                    <!-- Contenu chargé dynamiquement -->
+                </div>
+                <div id="content-catalog-cards">
+                    <div id="card-container" class="card-container"></div>
+                    <div id="details" class="details hidden">
+                        <!-- 
+                        <button id="back-button" class="back-button">Retour</button>
+                        <h2 id="details-title"></h2>
+                        <div class="content">
+                            <img id="details-image" alt="Objet">
+                            <div class="info">
+                                <p id="details-description"></p>
+                                <p id="details-price"></p>
+                                <p id="details-cost"></p>
+                                <p id="details-time"></p>
                             </div>
                         </div>
+                        -->
                     </div>
-                    <div id="content-catalog-list"></div>
                 </div>
-            </main>
-        </div>
+                <div id="content-catalog-list"></div>
+            </div>
+        </main>
+    </div>
 
-        <!-- FOOTER -->
-        <footer>
-            <p>© 2024 Marché de Noël de Bouguenais. Tous droits réservés.</p>
-            <p>Site créé avec ❤️. <a href="#" onclick="loadPage('mentions.html')">Mentions légales</a></p>
-        </footer>
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2024 Aneth - Boug'Maker - Tous droits réservés</p>
+        <p>Site créé avec ❤️. <a href="#" onclick="loadPage('mentions.html')">Mentions légales</a></p>
+    </footer>
 
-    </body>
+</body>
+
 </html>

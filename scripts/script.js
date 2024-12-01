@@ -6,6 +6,7 @@ function loadPage(page) {
     document.getElementById('content-catalog-list').innerHTML = '';
     document.getElementById('content-catalog-cards').classList.add('hidden');
     document.getElementById('content-catalog-list').classList.add('hidden');
+    document.getElementById('content-catalog-list').classList.add('hidden');
     console.log(page);
 
     if (page=='creations.html')
@@ -62,6 +63,7 @@ function loadCards() {
             
             const cardContainer = document.getElementById('card-container');
             const details = document.getElementById('details');
+            /*
             const detailsTitle = document.getElementById('details-title');
             const detailsImage = document.getElementById('details-image');
             const detailsDescription = document.getElementById('details-description');
@@ -69,6 +71,7 @@ function loadCards() {
             const detailsCost = document.getElementById('details-cost');
             const detailsTime = document.getElementById('details-time');
             const backButton = document.getElementById('back-button');
+            */
             cardContainer.innerHTML = '';
             details.classList.add('hidden');
             cardContainer.classList.remove('hidden');
@@ -79,10 +82,11 @@ function loadCards() {
                 card.className = 'card';
                 card.innerHTML = `
                     <img src="${item.image}" alt="${item.name}">
-                    <h3>${item.name}</h3>
-                    <p>${item.price} €</p>
+                    <h4>${item.name}</h4>
+                    <!--<p>${item.price} €</p>-->
                 `;
                 card.addEventListener('click', () => {
+                    /*
                     cardContainer.classList.add('hidden');
                     details.classList.remove('hidden');
 
@@ -92,6 +96,7 @@ function loadCards() {
                     detailsPrice.textContent = `Prix : ${item.price} €`;
                     detailsCost.textContent = `Coût de revient : ${item.cost} €`;
                     detailsTime.textContent = `Temps de fabrication : ${item.time} heures`;
+                    */
                 });
                 cardContainer.appendChild(card);
             });
@@ -106,7 +111,6 @@ function loadCards() {
             console.error('Erreur :', error);
         });
 }
-
 function loadList() {
     // Chargement des données à partir du fichier JSON
     fetch('datas/data.json')
@@ -117,25 +121,31 @@ function loadList() {
             return response.json();
         })
         .then(data => {
-            document.getElementById('content-catalog-cards').classList.remove('hidden');
+            document.getElementById('content-catalog-list').classList.remove('hidden');
             
             const listContainer = document.getElementById('content-catalog-list');
 
             listContainer.innerHTML = ''; // Réinitialisation du conteneur
 
-            // Affichage des articles sous forme de tableau
+            // Affichage des articles avec disposition en ligne
             data.forEach(item => {
                 const itemElement = document.createElement('div');
                 itemElement.classList.add('item');
 
                 itemElement.innerHTML = `
-                    <img src="${item.image}" alt="${item.name}">
-                    <h3>${item.name}</h3>
-                    <p>${item.description}</p>
-                    <div class="price">€${item.price}</div>
-                    <div class="details">
-                        <p>Coût de revient : €${item.cost}</p>
-                        <p>Temps de fabrication : ${item.time} heures</p>
+                    <div class="item-content">
+                        <div class="item-left">
+                            <img src="${item.image}" alt="${item.name}">
+                            <h3>${item.name}</h3>
+                        </div>
+                        <div class="item-right">
+                            <p>${item.description}</p>
+                            <div class="price">€${item.price}</div>
+                            <div class="details">
+                                <p>Coût de revient : €${item.cost}</p>
+                                <p>Temps de fabrication : ${item.time} heures</p>
+                            </div>
+                        </div>
                     </div>
                 `;
 

@@ -1,0 +1,27 @@
+
+/* Sections */
+.section-fabrication {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.section-fabrication:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.section-fabrication img {
+    width: 200px;
+    height: auto; /* Conserve les proportions */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-fabrication .content {
+    flex: 1;
+}
+
+.section-fabrication h2 {
+    margin-top: 0;
+    color: #5A865A; 
+}
