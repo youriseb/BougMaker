@@ -9,16 +9,13 @@ function loadPage(page) {
     document.getElementById('content-catalog-list').classList.add('hidden');
     console.log(page);
 
-    if (page=='creations.html')
-    {
+    if (page == 'creations.html') {
         loadCards();
     }
-    else if (page=='catalogue.html')
-    {
+    else if (page == 'catalogue.html') {
         loadList();
     }
-    else
-    {
+    else {
         //document.getElementById('content-catalog-cards').classList.remove('hidden');
         // Effectuer une requête pour charger le fichier HTML
         fetch(`pages/${page}`)
@@ -60,7 +57,7 @@ function loadCards() {
         })
         .then(data => {
             document.getElementById('content-catalog-cards').classList.remove('hidden');
-            
+
             const cardContainer = document.getElementById('card-container');
             const details = document.getElementById('details');
             /*
@@ -122,7 +119,7 @@ function loadList() {
         })
         .then(data => {
             document.getElementById('content-catalog-list').classList.remove('hidden');
-            
+
             const listContainer = document.getElementById('content-catalog-list');
 
             listContainer.innerHTML = ''; // Réinitialisation du conteneur

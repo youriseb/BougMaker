@@ -3,52 +3,69 @@
     margin: 2rem auto;
     max-width: 80%;
     overflow-x: auto;
-    scrollbar-width: thin; /* Firefox: largeur de la scrollbar */
-    scrollbar-color: #96562F #f4e9d8; /* Firefox: couleur du slider et du track */
+    scrollbar-width: thin;
+    /* Firefox: largeur de la scrollbar */
+    scrollbar-color: #96562F #f4e9d8;
+    /* Firefox: couleur du slider et du track */
 }
 
 .carousel-container::-webkit-scrollbar {
-    height: 8px; /* Hauteur de la scrollbar */
+    height: 8px;
+    /* Hauteur de la scrollbar */
 }
 
 .carousel-container::-webkit-scrollbar-thumb {
-    background-color: #96562F; /* Marron foncé pour le slider */
+    background-color: #96562F;
+    /* Marron foncé pour le slider */
     border-radius: 10px;
-    border: 2px solid #f4e9d8; /* Beige clair pour l’espace autour */
+    border: 2px solid #f4e9d8;
+    /* Beige clair pour l’espace autour */
 }
 
 .carousel-container::-webkit-scrollbar-track {
-    background-color: #f4e9d8; /* Beige clair pour le fond */
+    background-color: #f4e9d8;
+    /* Beige clair pour le fond */
     border-radius: 10px;
 }
 
 /* Carrousel avec des cartes */
 .carousel-accueil {
     display: flex;
-    gap: 10px; /* Espacement entre les cartes */
+    gap: 10px;
+    /* Espacement entre les cartes */
 }
 
 /* Cartes */
 .card {
-    flex: 0 0 auto; /* Empêche la carte de se réduire ou de s’étendre */
+    flex: 0 0 auto;
+    /* Empêche la carte de se réduire ou de s’étendre */
     width: 200px;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre douce */
-    background-color: #fff; /* Fond blanc pour les cartes */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Ombre douce */
+    background-color: #fff;
+    /* Fond blanc pour les cartes */
 }
 
 /* Images */
 .card img {
-    width: 100%; /* Images s’ajustent à la largeur de la carte */
-    height: 200px; /* Hauteur fixe */
-    object-fit: cover; /* Maintient les proportions en recadrant */
+    width: 100%;
+    /* Images s’ajustent à la largeur de la carte */
+    height: 200px;
+    /* Hauteur fixe */
+    object-fit: cover;
+    /* Maintient les proportions en recadrant */
 }
+
 /* Section accueil */
 .section-accueil {
-    display: flex; /* Mise en page en flexbox */
-    align-items: flex-start; /* Aligne le texte en haut par rapport à l'image */
-    gap: 1rem; /* Espace entre l'image et le texte */
+    display: flex;
+    /* Mise en page en flexbox */
+    align-items: flex-start;
+    /* Aligne le texte en haut par rapport à l'image */
+    gap: 1rem;
+    /* Espace entre l'image et le texte */
     padding: 1.5rem;
     margin: 2rem auto;
     max-width: 900px;
@@ -59,10 +76,14 @@
 
 /* Image festive */
 .festivites-noel img {
-    width: 150px; /* Largeur de l'image */
-    height: auto; /* Conserve les proportions */
-    border-radius: 10px; /* Bords arrondis */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+    width: 150px;
+    /* Largeur de l'image */
+    height: auto;
+    /* Conserve les proportions */
+    border-radius: 10px;
+    /* Bords arrondis */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Ombre subtile */
 }
 
 /* Texte festivités */
@@ -78,7 +99,8 @@
 
 .festivites-noel-texte img {
     float: left;
-    margin-right: 1rem; /* Ajoute un espace entre l'image et le texte */
+    margin-right: 1rem;
+    /* Ajoute un espace entre l'image et le texte */
     width: 180px;
     height: auto;
     border-radius: 10px;
@@ -88,13 +110,16 @@
 
 /* Style du lien */
 .festivites-noel a {
-    text-decoration: none; /* Pas de soulignement */
+    text-decoration: none;
+    /* Pas de soulignement */
 }
 
 .festivites-noel a img {
-    transition: transform 0.2s ease-in-out; /* Animation au survol */
+    transition: transform 0.2s ease-in-out;
+    /* Animation au survol */
 }
 
 .festivites-noel a:hover img {
-    transform: scale(1.05); /* Agrandit légèrement l'image au survol */
+    transform: scale(1.05);
+    /* Agrandit légèrement l'image au survol */
 }

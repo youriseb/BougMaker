@@ -1,8 +1,11 @@
 .contact-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Crée trois colonnes de même largeur */
-    gap: 20px; /* Espace entre les colonnes */
-    margin: 0 auto; /* Centre le conteneur */
+    grid-template-columns: repeat(3, 1fr);
+    /* Crée trois colonnes de même largeur */
+    gap: 20px;
+    /* Espace entre les colonnes */
+    margin: 0 auto;
+    /* Centre le conteneur */
 }
 
 .contact-column {
@@ -18,6 +21,7 @@
 
 @media (max-width: 768px) {
     .contact-container {
-        grid-template-columns: 1fr; /* Affiche les colonnes en une seule colonne sur les petits écrans */
+        grid-template-columns: 1fr;
+        /* Affiche les colonnes en une seule colonne sur les petits écrans */
     }
 }

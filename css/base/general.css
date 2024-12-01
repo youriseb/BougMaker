@@ -29,30 +29,43 @@ body {
 
 /* HEADER */
 header {
-    background: linear-gradient(135deg, #7B684F, #A89F91); /* Dégradé subtile entre les tons bois */
+    background: linear-gradient(135deg, #7B684F, #A89F91);
+    /* Dégradé subtile entre les tons bois */
     color: white;
     position: sticky;
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     width: 100%;
-    height: 135px; /* Hauteur totale du header */
+    height: 135px;
+    /* Hauteur totale du header */
     display: flex;
-    align-items: center; /* Centre verticalement les éléments */
-    background-image: url('../../images/banniere-select.png'); /* Image de fond texturée bois */
-    background-size: cover; /* S'assure que l'image couvre toute la zone */
+    align-items: center;
+    /* Centre verticalement les éléments */
+    background-image: url('../../images/banniere-select.png');
+    /* Image de fond texturée bois */
+    background-size: cover;
+    /* S'assure que l'image couvre toute la zone */
     background-repeat: no-repeat;
 }
 
 header .header-text {
-    flex-grow: 1; /* Prend tout l'espace entre le logo et la navigation */
-    text-align: center; /* Centre le texte */
-    font-family: 'Satisfy', cursive; /* Utilisation de la police Satisfy */
-    font-size: 1.5rem; /* Taille du texte */
-    color: #ffffff; /* Couleur du texte */
-    font-weight: normal; /* Poids de police normal */
-    margin: 0 20px; /* Ajoute un peu d'espace de chaque côté */
-    transform: skew(-5deg); /* Incline légèrement le texte vers le haut */
+    flex-grow: 1;
+    /* Prend tout l'espace entre le logo et la navigation */
+    text-align: center;
+    /* Centre le texte */
+    font-family: 'Satisfy', cursive;
+    /* Utilisation de la police Satisfy */
+    font-size: 1.5rem;
+    /* Taille du texte */
+    color: #ffffff;
+    /* Couleur du texte */
+    font-weight: normal;
+    /* Poids de police normal */
+    margin: 0 20px;
+    /* Ajoute un peu d'espace de chaque côté */
+    transform: skew(-5deg);
+    /* Incline légèrement le texte vers le haut */
 }
 
 /* Ajout de détails de découpe laser (SVG) */
@@ -63,9 +76,11 @@ header::before {
     left: 0;
     width: 100%;
     height: 100%;
-  /*  background-image: url('path/to/laser-cut-pattern.svg');  Motif SVG de découpe laser */
-    opacity: 0.1; /* Rend le motif subtil */
-    pointer-events: none; /* Ne bloque pas les interactions */
+    /*  background-image: url('path/to/laser-cut-pattern.svg');  Motif SVG de découpe laser */
+    opacity: 0.1;
+    /* Rend le motif subtil */
+    pointer-events: none;
+    /* Ne bloque pas les interactions */
 }
 
 /* Conteneur pour le header */
@@ -77,13 +92,15 @@ header .container {
     margin: 0 auto;
     width: 100%;
     height: 100%;
-    position: relative; /* Pour superposer le contenu sur les effets */
+    position: relative;
+    /* Pour superposer le contenu sur les effets */
 }
 
 /* LOGO */
 header .logo {
     flex-shrink: 0;
-    height: 100%; /* Prend toute la hauteur du header */
+    height: 100%;
+    /* Prend toute la hauteur du header */
     width: auto;
     margin: 0;
     padding: 0;
@@ -101,7 +118,8 @@ header .logo::after {
     transform: translate(-50%, -50%);
     width: 100px;
     height: 100px;
-    background: rgba(255, 255, 255, 1); /* Effet de peinture légère */
+    background: rgba(255, 255, 255, 1);
+    /* Effet de peinture légère */
     border-radius: 50%;
     box-shadow: 0 0 15px rgb(255, 255, 255);
 }
@@ -115,14 +133,21 @@ nav {
 }
 
 nav a {
-    color: rgb(240, 160, 70); /* Texte blanc pour bien ressortir sur le fond */
-    font-weight: bold; /* Texte en gras */
-    text-decoration: none; /* Retire le souligné par défaut */
+    color: rgb(240, 160, 70);
+    /* Texte blanc pour bien ressortir sur le fond */
+    font-weight: bold;
+    /* Texte en gras */
+    text-decoration: none;
+    /* Retire le souligné par défaut */
     font-size: 1rem;
-    padding: 5px 10px; /* Ajoute de l'espace autour du texte */
-    border: 2px solid #52453f; /* Bordure marron foncé autour du texte */
-    border-radius: 5px; /* Coins arrondis pour un aspect plus doux */
-    transition: color 0.3s ease, border-color 0.3s ease; /* Transition douce */
+    padding: 5px 10px;
+    /* Ajoute de l'espace autour du texte */
+    border: 2px solid #52453f;
+    /* Bordure marron foncé autour du texte */
+    border-radius: 5px;
+    /* Coins arrondis pour un aspect plus doux */
+    transition: color 0.3s ease, border-color 0.3s ease;
+    /* Transition douce */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -130,19 +155,24 @@ nav a {
 }
 
 nav a:hover {
-    background: rgba(255, 255, 255, 0.8); /* Effet de peinture légère */
-    color: #2C6E49; /* Couleur du texte au survol */
-    border-color: #2C6E49; /* Change la couleur de la bordure au survol */
+    background: rgba(255, 255, 255, 0.8);
+    /* Effet de peinture légère */
+    color: #2C6E49;
+    /* Couleur du texte au survol */
+    border-color: #2C6E49;
+    /* Change la couleur de la bordure au survol */
 }
 
 nav a span {
     font-size: 1.2rem;
-    color: #aaa5a5; /* Couleur de l'icône */
+    color: #aaa5a5;
+    /* Couleur de l'icône */
     transition: color 0.3s ease;
 }
 
 nav a:hover span {
-    color: #ff5100; /* Change la couleur de l'icône au survol */
+    color: #ff5100;
+    /* Change la couleur de l'icône au survol */
 }
 
 nav a:last-child {
@@ -169,33 +199,48 @@ nav a:last-child {
 /* Ajustement du menu mobile */
 .mobile-menu {
     display: none;
-    flex-direction: column; /* Alignement en colonne */
-    gap: 15px; /* Espace entre les liens */
+    flex-direction: column;
+    /* Alignement en colonne */
+    gap: 15px;
+    /* Espace entre les liens */
     background-color: white;
     text-align: center;
-    position: absolute; /* Positionnement relatif au header */
-    top: 135px; /* Juste en dessous du header */
+    position: absolute;
+    /* Positionnement relatif au header */
+    top: 135px;
+    /* Juste en dessous du header */
     left: 0;
-    width: 100%; /* Prend toute la largeur de l'écran */
-    padding: 20px 0; /* Ajoute un padding pour le confort visuel */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ajoute une ombre pour séparer visuellement */
-    z-index: 999; /* Garantit que le menu reste au-dessus */
+    width: 100%;
+    /* Prend toute la largeur de l'écran */
+    padding: 20px 0;
+    /* Ajoute un padding pour le confort visuel */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* Ajoute une ombre pour séparer visuellement */
+    z-index: 999;
+    /* Garantit que le menu reste au-dessus */
 }
 
 .mobile-menu a {
-    font-size: 1rem; /* Taille de texte confortable */
-    color: #333; /* Couleur du texte */
-    text-decoration: none; /* Supprime le soulignement */
-    padding: 10px 0; /* Ajoute un padding vertical */
-    border-bottom: 1px solid #eee; /* Séparation entre les liens */
+    font-size: 1rem;
+    /* Taille de texte confortable */
+    color: #333;
+    /* Couleur du texte */
+    text-decoration: none;
+    /* Supprime le soulignement */
+    padding: 10px 0;
+    /* Ajoute un padding vertical */
+    border-bottom: 1px solid #eee;
+    /* Séparation entre les liens */
 }
 
 .mobile-menu a:last-child {
-    border-bottom: none; /* Supprime la bordure pour le dernier élément */
+    border-bottom: none;
+    /* Supprime la bordure pour le dernier élément */
 }
 
 .mobile-menu.active {
-    display: flex; /* Affiche le menu lorsqu'il est actif */
+    display: flex;
+    /* Affiche le menu lorsqu'il est actif */
 }
 
 /* RESPONSIVE DESIGN */
@@ -240,16 +285,25 @@ h1 {
 }
 
 @keyframes heartbeat {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.1); }
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
 }
 
 h2 {
-    color: #D97A35; /* Vert forêt doux */
+    color: #D97A35;
+    /* Vert forêt doux */
 }
 
 h3 {
-    color: #5A865A; /* Orange terre cuite */
+    color: #5A865A;
+    /* Orange terre cuite */
 }
 
 h4 {
@@ -297,18 +351,22 @@ button:hover,
 .hidden {
     display: none;
 }
+
 /* FOOTER */
 footer {
     background-color: #2C6E49;
     color: white;
-    padding: 30px 10px; /* Augmente la hauteur du footer */
+    padding: 30px 10px;
+    /* Augmente la hauteur du footer */
     text-align: center;
     /* Ombre subtile pour la séparation */
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
     position: relative;
     overflow: hidden;
-    font-size: 1rem; /* Ajustez la taille du texte si nécessaire */
-    min-height: 80px; /* Assure que le footer a une hauteur minimale */
+    font-size: 1rem;
+    /* Ajustez la taille du texte si nécessaire */
+    min-height: 80px;
+    /* Assure que le footer a une hauteur minimale */
 }
 
 /* Création de l'effet de carrelage */
@@ -320,8 +378,9 @@ footer::before {
     width: 100%;
     height: 100%;
     background-image: linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
-                      linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-    background-size: 50px 50px; /* Taille du carrelage */
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    /* Taille du carrelage */
     pointer-events: none;
 }
 
@@ -333,20 +392,25 @@ footer::after {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.1); /* Moins opaque pour que le texte reste lisible */
+    background: rgba(255, 255, 255, 0.1);
+    /* Moins opaque pour que le texte reste lisible */
     mix-blend-mode: overlay;
     pointer-events: none;
-    opacity: 0.2; /* Diminue l'intensité de la texture */
+    opacity: 0.2;
+    /* Diminue l'intensité de la texture */
 }
 
 /* Style des liens */
 footer a {
     color: #ffcc00;
     text-decoration: none;
-    font-weight: bold; /* Renforce la lisibilité des liens */
+    font-weight: bold;
+    /* Renforce la lisibilité des liens */
 }
 
 footer p {
-    margin: 5px 0; /* Ajoute un peu d'espace entre les lignes de texte */
-    font-size: 1rem; /* Ajustez la taille du texte si nécessaire */
+    margin: 5px 0;
+    /* Ajoute un peu d'espace entre les lignes de texte */
+    font-size: 1rem;
+    /* Ajustez la taille du texte si nécessaire */
 }
