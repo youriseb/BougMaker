@@ -76,6 +76,16 @@
     line-height: 1.5;
 }
 
+.festivites-noel-texte img {
+    float: left;
+    margin-right: 1rem; /* Ajoute un espace entre l'image et le texte */
+    width: 180px;
+    height: auto;
+    border-radius: 10px;
+    background: linear-gradient(to right, #ffe3e3, #fff7f7);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 /* Style du lien */
 .festivites-noel a {
     text-decoration: none; /* Pas de soulignement */
