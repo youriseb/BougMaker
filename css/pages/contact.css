@@ -17,6 +17,15 @@
 
 .contact-column h2 {
     margin-top: 0;
+    color: #5A865A;
+    background-color: #f0f0f0; /* Gris clair */
+    padding: 10px;
+    border-radius: 6px 6px 0 0; /* Arrondi uniquement en haut */
+    text-align: center; /* Centre le texte pour une meilleure apparence */
+}
+
+.contact-column h3 {
+    color: #000000;
 }
 
 @media (max-width: 768px) {
