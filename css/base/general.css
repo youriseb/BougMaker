@@ -39,7 +39,7 @@ header {
     height: 135px; /* Hauteur totale du header */
     display: flex;
     align-items: center; /* Centre verticalement les éléments */
-    background-image: url('../../images/banniere3.png'); /* Image de fond texturée bois */
+    background-image: url('../../images/banniere-select.png'); /* Image de fond texturée bois */
     background-size: cover; /* S'assure que l'image couvre toute la zone */
     background-repeat: no-repeat;
 }
