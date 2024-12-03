@@ -8,6 +8,8 @@ function loadPage(page) {
     document.getElementById('content-catalog-list').classList.add('hidden');
     document.getElementById('content-catalog-list').classList.add('hidden');
     console.log(page);
+    const menu = document.querySelector('.mobile-menu');
+    menu.classList.remove('active'); // Cache le menu en supprimant la classe active
 
     if (page == 'creations.html') {
         loadCards();
