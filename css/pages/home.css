@@ -101,7 +101,7 @@
     float: left;
     margin-right: 1rem;
     /* Ajoute un espace entre l'image et le texte */
-    width: 180px;
+    width: 170px;
     height: auto;
     border-radius: 10px;
     background: linear-gradient(to right, #ffe3e3, #fff7f7);
@@ -122,4 +122,38 @@
 .festivites-noel a:hover img {
     transform: scale(1.05);
     /* Agrandit légèrement l'image au survol */
+}
+
+@media (max-width: 768px) {
+    
+    .festivites-noel img {
+        display: block; /* Rend l'image un élément de bloc */
+        margin: 0 auto; /* Centre horizontalement */
+        max-width: 80%; /* Limite la taille de l'image */
+    }
+
+    .section-accueil {
+        align-items: center; /* Centre les éléments en mode vertical */
+        text-align: center; /* Centre le texte */
+    }
+    
+    .section-accueil {
+        flex-direction: column; /* Les éléments s'empilent verticalement */
+        gap: 10px;
+    }
+
+    .carousel-accueil {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 colonnes sur les petits écrans */
+        gap: 10px;
+    }
+
+    .festivites-noel-texte p {
+        font-size: 1rem; /* Réduit la taille du texte */
+    }
+
+    img {
+        max-width: 100%; /* Empêche les images de déborder */
+        height: auto;
+    }
 }
